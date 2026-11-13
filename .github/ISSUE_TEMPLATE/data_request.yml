@@ -1,0 +1,92 @@
+name: Data sample request
+description: Request special data processing (calibration samples, run selections, reprocessing, filtered ntuples).
+title: "[Data] "
+labels: ["request", "Data", "status: new"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Check the [available data samples](https://s81d.github.io/ANNIE_Samples/gen1/data/) first.
+        For development, the 2% unblinded subset is usually the right starting point.
+  - type: input
+    id: requester
+    attributes:
+      label: Requester and group
+      placeholder: "Name, working group"
+    validations:
+      required: true
+  - type: input
+    id: analysis
+    attributes:
+      label: Related analysis or study
+    validations:
+      required: true
+  - type: input
+    id: date_needed
+    attributes:
+      label: Date needed
+      placeholder: "YYYY-MM-DD, or 'no deadline'"
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - Essential
+        - High
+        - Moderate
+        - Low
+    validations:
+      required: true
+  - type: dropdown
+    id: purpose
+    attributes:
+      label: Purpose
+      options:
+        - Calibration
+        - MC tuning
+        - Reconstruction study
+        - Physics analysis
+        - Other (describe below)
+    validations:
+      required: true
+  - type: textarea
+    id: runs
+    attributes:
+      label: Runs and run type
+      description: Run periods or run numbers, and the run type (beam, AmBe, laser, LED, cosmic, ...).
+    validations:
+      required: true
+  - type: input
+    id: triggers
+    attributes:
+      label: Triggers or event selection
+      placeholder: "e.g. undelayed beam trigger (14), good beam; or laser trigger (47)"
+  - type: input
+    id: software
+    attributes:
+      label: Toolchain and ToolAnalysis version
+      placeholder: "e.g. BeamClusterAnalysis, ToolAnalysis V1.6.0"
+  - type: dropdown
+    id: output
+    attributes:
+      label: Output
+      multiple: true
+      options:
+        - ProcessedData
+        - BeamCluster ntuples
+        - Filtered ntuples
+        - Other (describe below)
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Special requirements and justification
+  - type: checkboxes
+    id: checked
+    attributes:
+      label: Checks
+      options:
+        - label: I checked that no sample on the site already covers this.
+          required: true
+        - label: If this needs blinded data, I have contacted the analysis coordinators.

@@ -1,0 +1,89 @@
+name: Fake-data request
+description: Request a sample from an alternative model or generator, or a reweighted sample, to use as fake data.
+title: "[FakeData] "
+labels: ["request", "FakeData", "status: new"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Fake-data samples are compared with the central-value MC to test an analysis (for example, unfolding or model dependence).
+        Check the [alternative models](https://s81d.github.io/ANNIE_Samples/gen1/mc/#alternative-models) already available first.
+  - type: input
+    id: requester
+    attributes:
+      label: Requester and group
+      placeholder: "Name, working group"
+    validations:
+      required: true
+  - type: input
+    id: analysis
+    attributes:
+      label: Related analysis or study
+    validations:
+      required: true
+  - type: input
+    id: date_needed
+    attributes:
+      label: Date needed
+      placeholder: "YYYY-MM-DD, or 'no deadline'"
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - Essential
+        - High
+        - Moderate
+        - Low
+    validations:
+      required: true
+  - type: textarea
+    id: model
+    attributes:
+      label: Model change
+      description: What differs from the central value (generator or version, nuclear model, tune, reweighting knobs and values), with references.
+    validations:
+      required: true
+  - type: dropdown
+    id: method
+    attributes:
+      label: How should it be made?
+      options:
+        - New generation (full chain)
+        - Reweighting of an existing sample
+        - Not sure
+    validations:
+      required: true
+  - type: input
+    id: matched_to
+    attributes:
+      label: Central-value sample it should match
+      placeholder: "e.g. Gen 1 MC central value: tank"
+  - type: dropdown
+    id: final_stage
+    attributes:
+      label: Final stage
+      options:
+        - GENIE
+        - anniedirt
+        - WCSim
+        - MC ntuples (ToolAnalysis)
+        - Other (describe below)
+  - type: input
+    id: size
+    attributes:
+      label: Sample size
+      placeholder: "number of events, or POT"
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Special requirements and justification
+  - type: checkboxes
+    id: checked
+    attributes:
+      label: Checks
+      options:
+        - label: I checked that no sample on the site already covers this.
+          required: true

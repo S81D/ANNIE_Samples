@@ -1,0 +1,19 @@
+name: Report a problem with a sample
+description: A wrong path, missing or broken files, or a wrong description on the site.
+title: "[Problem] "
+labels: ["sample-problem"]
+body:
+  - type: input
+    id: sample
+    attributes:
+      label: Sample
+      description: Link to the sample on the site, or its path.
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong?
+      description: What you expected, what you found, and the commands or files involved.
+    validations:
+      required: true

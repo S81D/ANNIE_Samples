@@ -1,0 +1,68 @@
+site_name: ANNIE Data and MC Samples
+site_description: ANNIE production data and simulation samples, where to find them, and how to request new ones.
+site_author: Steven Doran
+site_url: https://s81d.github.io/ANNIE_Samples/
+repo_url: https://github.com/S81D/ANNIE_Samples
+repo_name: S81D/ANNIE_Samples
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - content.action.edit
+    - content.code.copy
+    - search.highlight
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - md_in_html
+  - tables
+  - pymdownx.details
+  - pymdownx.superfences
+  - toc:
+      permalink: true
+
+# Fail the build (mkdocs build --strict) on broken links or anchors between pages.
+validation:
+  links:
+    anchors: warn
+
+nav:
+  - Home: index.md
+  - Getting started: getting-started.md
+  - Run periods and POT: run-periods.md
+  - Generation 1:
+      - Data: gen1/data.md
+      - Calibration and tuning data: gen1/calibration.md
+      - Analysis-specific data: gen1/analysis-specific.md
+      - MC: gen1/mc.md
+  - Generation 2:
+      - Data: gen2/data.md
+      - MC: gen2/mc.md
+  - Deprecated: deprecated.md
+  - Requesting a sample: requests.md
+  - Contributing: contributing.md

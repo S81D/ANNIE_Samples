@@ -1,0 +1,34 @@
+/* Status badges: <span class="badge recommended">Recommended</span> */
+.md-typeset .badge {
+  display: inline-block;
+  padding: 0.1em 0.65em;
+  border: 1px solid currentColor;
+  border-radius: 1em;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.6;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.md-typeset .badge.recommended { color: #1b7f3b; background: rgba(27, 127, 59, 0.10); }
+.md-typeset .badge.available   { color: #1f5fbf; background: rgba(31, 95, 191, 0.10); }
+.md-typeset .badge.analysis    { color: #7a4fbf; background: rgba(122, 79, 191, 0.10); }
+.md-typeset .badge.production  { color: #a35f00; background: rgba(163, 95, 0, 0.10); }
+.md-typeset .badge.planned     { color: #5f6368; background: rgba(95, 99, 104, 0.10); }
+.md-typeset .badge.dq          { color: #a35f00; background: rgba(163, 95, 0, 0.10); }
+.md-typeset .badge.deprecated  { color: #b3261e; background: rgba(179, 38, 30, 0.10); }
+
+/* Lighter text on the dark ("slate") scheme so the badges stay readable */
+[data-md-color-scheme="slate"] .md-typeset .badge.recommended { color: #74d394; }
+[data-md-color-scheme="slate"] .md-typeset .badge.available   { color: #8ab4f8; }
+[data-md-color-scheme="slate"] .md-typeset .badge.analysis    { color: #c3a6f5; }
+[data-md-color-scheme="slate"] .md-typeset .badge.production  { color: #f2b45c; }
+[data-md-color-scheme="slate"] .md-typeset .badge.planned     { color: #bdc1c6; }
+[data-md-color-scheme="slate"] .md-typeset .badge.dq          { color: #f2b45c; }
+[data-md-color-scheme="slate"] .md-typeset .badge.deprecated  { color: #f28b82; }
+
+/* Long dCache paths: let them break inside table cells instead of widening the table */
+.md-typeset table:not([class]) td code {
+  word-break: break-all;
+}

@@ -1,0 +1,119 @@
+name: MC sample request
+description: Request a new simulation sample (GENIE, anniedirt, WCSim, MC ntuples, particle gun, cosmics).
+title: "[MC] "
+labels: ["request", "MC", "status: new"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Check the [available samples](https://s81d.github.io/ANNIE_Samples/) first: an existing sample may already do.
+        dCache space is shared by all of ANNIE; a full MC production (4000 runs, all stages) takes about 0.4 TB.
+  - type: input
+    id: requester
+    attributes:
+      label: Requester and group
+      placeholder: "Name, working group"
+    validations:
+      required: true
+  - type: input
+    id: analysis
+    attributes:
+      label: Related analysis or study
+    validations:
+      required: true
+  - type: input
+    id: date_needed
+    attributes:
+      label: Date needed
+      placeholder: "YYYY-MM-DD, or 'no deadline'"
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - Essential
+        - High
+        - Moderate
+        - Low
+    validations:
+      required: true
+  - type: dropdown
+    id: source
+    attributes:
+      label: Flux or source
+      options:
+        - BNB FHC (standard gsimple flux)
+        - Flat neutrino energy spectrum
+        - Cosmics
+        - Particle gun
+        - Other (describe below)
+    validations:
+      required: true
+  - type: input
+    id: generator
+    attributes:
+      label: Generator, version and tune
+      placeholder: "e.g. GENIE v3.0.6, G18_10a_02_11a"
+  - type: dropdown
+    id: volume
+    attributes:
+      label: Interaction volume
+      multiple: true
+      options:
+        - Tank
+        - World
+        - Other (describe below)
+  - type: dropdown
+    id: geometry
+    attributes:
+      label: Detector configuration
+      options:
+        - Standard (water)
+        - PMT tilt and shift
+        - WbLS / SANDI
+        - Other (describe below)
+  - type: dropdown
+    id: tuning
+    attributes:
+      label: Detector tuning
+      options:
+        - CC tuning
+        - NC tuning
+        - Other or not applicable
+  - type: dropdown
+    id: final_stage
+    attributes:
+      label: Final stage
+      options:
+        - GENIE
+        - anniedirt
+        - WCSim
+        - MC ntuples (ToolAnalysis)
+        - RAT-PAC
+        - Other (describe below)
+    validations:
+      required: true
+  - type: input
+    id: software
+    attributes:
+      label: Software versions or branches
+      placeholder: "e.g. WCSim v2.1.0-ANNIE, ToolAnalysis V1.6.0"
+  - type: input
+    id: size
+    attributes:
+      label: Sample size
+      placeholder: "number of events, or POT"
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Special requirements and justification
+      description: Anything else the producer needs to know (outputs to keep, matching to an existing sample, why the existing samples don't work).
+  - type: checkboxes
+    id: checked
+    attributes:
+      label: Checks
+      options:
+        - label: I checked that no sample on the site already covers this.
+          required: true
