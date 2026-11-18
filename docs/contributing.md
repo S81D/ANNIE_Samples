@@ -1,6 +1,6 @@
 # Contributing
 
-The site is written in Markdown in [S81D/ANNIE_Samples](https://github.com/S81D/ANNIE_Samples), built
+The site is written in Markdown in [ANNIEsoft/ANNIE_Samples](https://github.com/ANNIEsoft/ANNIE_Samples), built
 with [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/), and published by GitHub Actions
 on every push to `main`.
 
@@ -26,7 +26,7 @@ One or two sentences: what the sample is and what it is for. Caveats, if any.
 | GENIE | GENIE v3.0.6, G18_10a_02_11a | `/pnfs/annie/persistent/...` |
 | WCSim, PMT | WCSim v2.0.0-ANNIE, CC tuning | `/pnfs/annie/persistent/...` |
 
-**Events / POT:** ... · **Contact:** ... · **Request:** [#N](https://github.com/S81D/ANNIE_Samples/issues/N)
+**Events / POT:** ... · **Contact:** ... · **Request:** [#N](https://github.com/ANNIEsoft/ANNIE_Samples/issues/N)
 ```
 
 Status badges (meanings in [Getting started](getting-started.md#status-labels)):

@@ -1,7 +1,7 @@
 # Requesting a sample
 
 Requests are GitHub issues made from a form (you need a GitHub account).
-[Open a request](https://github.com/S81D/ANNIE_Samples/issues/new/choose) and pick the form that fits:
+[Open a request](https://github.com/ANNIEsoft/ANNIE_Samples/issues/new/choose) and pick the form that fits:
 
 | Form | Label | Use it for |
 |---|---|---|

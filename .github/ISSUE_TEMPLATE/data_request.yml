@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Check the [available data samples](https://s81d.github.io/ANNIE_Samples/gen1/data/) first.
+        Check the [available data samples](https://anniesoft.github.io/ANNIE_Samples/gen1/data/) first.
         For development, the 2% unblinded subset is usually the right starting point.
   - type: input
     id: requester

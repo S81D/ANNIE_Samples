@@ -2,12 +2,12 @@
 # Create (or update) the issue labels used by the request forms. Run once after creating the
 # GitHub repository, from any machine where the GitHub CLI is logged in:
 #
-#   bash tools/create_labels.sh S81D/ANNIE_Samples
+#   bash tools/create_labels.sh ANNIEsoft/ANNIE_Samples
 #
 # The forms in .github/ISSUE_TEMPLATE refer to these names exactly; rename both together.
 
 set -euo pipefail
-repo="${1:-S81D/ANNIE_Samples}"
+repo="${1:-ANNIEsoft/ANNIE_Samples}"
 
 label() {
   gh label create "$1" --repo "$repo" --color "$2" --description "$3" --force

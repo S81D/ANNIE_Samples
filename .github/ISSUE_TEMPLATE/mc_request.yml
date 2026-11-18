@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Check the [available samples](https://s81d.github.io/ANNIE_Samples/) first: an existing sample may already do.
+        Check the [available samples](https://anniesoft.github.io/ANNIE_Samples/) first: an existing sample may already do.
         dCache space is shared by all of ANNIE; a full MC production (4000 runs, all stages) takes about 0.4 TB.
   - type: input
     id: requester

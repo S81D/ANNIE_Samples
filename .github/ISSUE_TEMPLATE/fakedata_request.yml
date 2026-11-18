@@ -7,7 +7,7 @@ body:
     attributes:
       value: |
         Fake-data samples are compared with the central-value MC to test an analysis (for example, unfolding or model dependence).
-        Check the [alternative models](https://s81d.github.io/ANNIE_Samples/gen1/mc/#alternative-models) already available first.
+        Check the [alternative models](https://anniesoft.github.io/ANNIE_Samples/gen1/mc/#alternative-models) already available first.
   - type: input
     id: requester
     attributes:

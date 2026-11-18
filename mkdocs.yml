@@ -1,9 +1,9 @@
 site_name: ANNIE Data and MC Samples
 site_description: ANNIE production data and simulation samples, where to find them, and how to request new ones.
 site_author: Steven Doran
-site_url: https://s81d.github.io/ANNIE_Samples/
-repo_url: https://github.com/S81D/ANNIE_Samples
-repo_name: S81D/ANNIE_Samples
+site_url: https://anniesoft.github.io/ANNIE_Samples/
+repo_url: https://github.com/ANNIEsoft/ANNIE_Samples
+repo_name: ANNIEsoft/ANNIE_Samples
 edit_uri: edit/main/docs/
 
 theme:

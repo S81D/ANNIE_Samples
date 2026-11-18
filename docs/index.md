@@ -33,7 +33,7 @@ new ones.
 ## Requesting a sample
 
 Requests are GitHub issues made from a form:
-[open a request](https://github.com/S81D/ANNIE_Samples/issues/new/choose). The forms and what happens
+[open a request](https://github.com/ANNIEsoft/ANNIE_Samples/issues/new/choose). The forms and what happens
 next are described on [Requesting a sample](requests.md).
 
 ## Contacts { #contacts }
@@ -47,4 +47,4 @@ next are described on [Requesting a sample](requests.md).
 
 The central MC was produced by James Minock, who is no longer available: please ask Andy or Steven.
 To fix something on the site, use the pencil icon at the top of any page, or
-[report a problem with a sample](https://github.com/S81D/ANNIE_Samples/issues/new/choose).
+[report a problem with a sample](https://github.com/ANNIEsoft/ANNIE_Samples/issues/new/choose).
